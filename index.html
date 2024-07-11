@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Art Studio</title>
+    <link rel="icon" href="Images/logo.png">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Line Awesome Icons CSS -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            position: relative;
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+            font-size: x-large;
+            font-weight: 700;
+        }
+
+        .spline-viewer-wrapper {
+            position: relative;
+            z-index: 0;
+        }
+
+        .video-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Navbar -->
+    <nav class="navbar py-3 navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 100%; z-index: 7;">
+        <div class="container">
+            <img src="Images/logo.png" alt="" srcset="" style="height: 34px;">
+            <h4 style="margin: 0 7px;"><a href="#">Art Studio</a></h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Work</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="Images/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <!-- Hero -->
+            <section id="hero" class="min-vh-100 d-grid align-content-center py-5">
+
+                <!-- Container -->
+                <div class="container">
+                    <!-- Spline Viewer Wrapper -->
+                    <div class="spline-viewer-wrapper">
+                        <script type="module"
+                            src="https://unpkg.com/@splinetool/viewer@1.8.9/build/spline-viewer.js"></script>
+                        <spline-viewer
+                            url="https://prod.spline.design/FLklujIv3POCFKYw/scene.splinecode"></spline-viewer>
+                    </div>
+                    <!-- Overlay Content -->
+                    <div class="overlay-content col-lg-12 px-lg-5">
+                        <h1 class="h3">"We are a team of talented designers who create beautiful arts."</h1>
+                        <p class="mt-3 mb-4">"We believe in the power of great design to transform businesses and
+                            inspire
+                            individuals. Our team of talented designers is dedicated to creating innovative and
+                            effective
+                            designs."</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-5 bg-2">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row align-items-center mb-3" data-aos="fade-down" data-aos-delay="400">
+
+                <!-- Col -->
+                <div class="col-md-8">
+                    <h6 class="text-primary" style="margin-top: 52px;">WORK</h6>
+                    <h2 class="h3">Our Latet Projects</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium atque molestias distinctio,
+                        libero tempore et architecto quidem veritatis, explicabo rerum ratione placeat?</p>
+                </div>
+
+                <!-- Col -->
+                <div class="col-md-4 text-md-end">
+                    <a href="#" class="btn btn-primary">Explore More</a>
+                </div>
+
+            </div>
+
+            <!-- Slider -->
+            <div class="swiper mySwiper pb-5">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="400">
+                        <div class="project p-4 border-custom">
+                            <img src="Images/slide(1).webp" class="img-fluid" alt="">
+                            <div class="overlay">
+                                <h4 class="h5">Project Heading</h4>
+                                <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae illum
+                                    architecto dolore alias ad dignissimos natus, accusantium cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="500">
+                        <div class="project p-4 border-custom">
+                            <img src="Images/slide(2).webp" class="img-fluid" alt="">
+                            <div class="overlay">
+                                <h4 class="h5">Project Heading</h4>
+                                <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae illum
+                                    architecto dolore alias ad dignissimos natus, accusantium cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="600">
+                        <div class="project p-4 border-custom">
+                            <img src="Images/slide(3).webp" class="img-fluid" alt="">
+                            <div class="overlay">
+                                <h4 class="h5">Project Heading</h4>
+                                <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae illum
+                                    architecto dolore alias ad dignissimos natus, accusantium cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="700">
+                        <div class="project p-4 border-custom">
+                            <img src="Images/slide(4).webp" class="img-fluid" alt="">
+                            <div class="overlay">
+                                <h4 class="h5">Project Heading</h4>
+                                <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae illum
+                                    architecto dolore alias ad dignissimos natus, accusantium cupiditate?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews" class="py-5 ">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row align-items-center mb-3" data-aos="fade-down" data-aos-delay="400">
+
+                <!-- Col -->
+                <div class="col-md-8">
+                    <h6 class="text-primary">REVIEWS</h6>
+                    <h2 class="h3">What our customers say?</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium atque molestias distinctio,
+                        libero tempore et architecto quidem veritatis, explicabo rerum ratione placeat?</p>
+                </div>
+
+                <!-- Col -->
+                <div class="col-md-4 text-md-end">
+                    <a href="#" class="btn btn-primary">Explore More</a>
+                </div>
+
+            </div>
+
+            <!-- Slider -->
+            <div class="swiper mySwiper pb-5">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="400">
+                        <div class="review p-4 border-custom">
+                            <img src="Images/testimonial(1).png" alt="">
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nobis,
+                                doloribus ea quaerat, repudiandae itaque minus ipsam eum sint, harum inventore ipsum
+                                consectetur illo.</p>
+                            <h5>Lion</h5>
+                            <p class="mb-0 text-primary">Designer</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="500">
+                        <div class="review p-4 border-custom">
+                            <img src="Images/testimonial(3).png" alt="">
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nobis,
+                                doloribus ea quaerat, repudiandae itaque minus ipsam eum sint, harum inventore ipsum
+                                consectetur illo.</p>
+                            <h5>Sparrow</h5>
+                            <p class="mb-0 text-primary">Designer</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="600">
+                        <div class="review p-4 border-custom">
+                            <img src="Images/testimonial(2).png" alt="">
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nobis,
+                                doloribus ea quaerat, repudiandae itaque minus ipsam eum sint, harum inventore ipsum
+                                consectetur illo.</p>
+                            <h5>Tiger</h5>
+                            <p class="mb-0 text-primary">Designer</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="swiper-slide" data-aos="fade-down" data-aos-delay="700">
+                        <div class="review p-4 border-custom">
+                            <img src="Images/testimonial(4).png" alt="">
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nobis,
+                                doloribus ea quaerat, repudiandae itaque minus ipsam eum sint, harum inventore ipsum
+                                consectetur illo.</p>
+                            <h5>Owl</h5>
+                            <p class="mb-0 text-primary">Designer</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="py-5 ">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row align-items-center mb-3" data-aos="fade-down" data-aos-delay="400">
+
+                <!-- Col -->
+                <div class="col-md-8">
+                    <h6 class="text-primary" style="margin-top: 52px;">TEAM</h6>
+                    <h2 class="h3">Meet our team members</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium atque molestias distinctio,
+                        libero tempore et architecto quidem veritatis, explicabo rerum ratione placeat?</p>
+                </div>
+
+                <!-- Col -->
+                <div class="col-md-4 text-md-end">
+                    <a href="#" class="btn btn-primary">Explore More</a>
+                </div>
+
+            </div>
+
+            <!-- Row -->
+            <div class="row g-4 text-center">
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="400">
+                    <div class="team-member border-custom py-3">
+                        <div class="team-head p-3">
+                            <img src="Images/painter(1).webp" class="img-fluid mb-3" alt="">
+                            <small class="text-primary">Designer</small>
+                            <h5 class="mb-0">Butterfly</h5>
+                        </div>
+                        <div class="divider mb-3"></div>
+                        <div class="links d-flex justify-content-between px-3">
+                            <a href="#" class="icon"><i class="lab la-facebook"></i></a>
+                            <a href="#" class="icon"><i class="lab la-instagram"></i></a>
+                            <a href="#" class="icon"><i class="lab la-dribbble"></i></a>
+                            <a href="#" class="icon"><i class="lab la-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="500">
+                    <div class="team-member border-custom py-3">
+                        <div class="team-head p-3">
+                            <img src="Images/painter(2).webp" class="img-fluid mb-3" alt="">
+                            <small class="text-primary">Designer</small>
+                            <h5 class="mb-0">Husky</h5>
+                        </div>
+                        <div class="divider mb-3"></div>
+                        <div class="links d-flex justify-content-between px-3">
+                            <a href="#" class="icon"><i class="lab la-facebook"></i></a>
+                            <a href="#" class="icon"><i class="lab la-instagram"></i></a>
+                            <a href="#" class="icon"><i class="lab la-dribbble"></i></a>
+                            <a href="#" class="icon"><i class="lab la-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="600">
+                    <div class="team-member border-custom py-3">
+                        <div class="team-head p-3">
+                            <img src="Images/painter(3).webp" class="img-fluid mb-3" alt="">
+                            <small class="text-primary">Designer</small>
+                            <h5 class="mb-0">Panda</h5>
+                        </div>
+                        <div class="divider mb-3"></div>
+                        <div class="links d-flex justify-content-between px-3">
+                            <a href="#" class="icon"><i class="lab la-facebook"></i></a>
+                            <a href="#" class="icon"><i class="lab la-instagram"></i></a>
+                            <a href="#" class="icon"><i class="lab la-dribbble"></i></a>
+                            <a href="#" class="icon"><i class="lab la-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="700">
+                    <div class="team-member border-custom py-3">
+                        <div class="team-head p-3">
+                            <img src="Images/painter(4).webp" class="img-fluid mb-3" alt="">
+                            <small class="text-primary">Designer</small>
+                            <h5 class="mb-0">Pigeon</h5>
+                        </div>
+                        <div class="divider mb-3"></div>
+                        <div class="links d-flex justify-content-between px-3">
+                            <a href="#" class="icon"><i class="lab la-facebook"></i></a>
+                            <a href="#" class="icon"><i class="lab la-instagram"></i></a>
+                            <a href="#" class="icon"><i class="lab la-dribbble"></i></a>
+                            <a href="#" class="icon"><i class="lab la-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-5 bg-2">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row align-items-center mb-3" data-aos="fade-down" data-aos-delay="400">
+
+                <!-- Col -->
+                <div class="col-md-8">
+                    <h6 class="text-primary" style="margin-top: 52px;">Blog</h6>
+                    <h2 class="h3">Latest Blog Posts</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium atque molestias distinctio,
+                        libero tempore et architecto quidem veritatis, explicabo rerum ratione placeat?</p>
+                </div>
+
+                <!-- Col -->
+                <div class="col-md-4 text-md-end">
+                    <a href="#" class="btn btn-primary">Explore More</a>
+                </div>
+
+            </div>
+
+            <!-- Row -->
+            <div class="row g-4">
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="400">
+                    <div class="blog-post p-4 border-custom">
+                        <span class="badge rounded-0 bg-primary">12-01-2002</span>
+                        <h5 class="my-3">Design </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, atque?</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="500">
+                    <div class="blog-post p-4 border-custom">
+                        <span class="badge rounded-0 bg-primary">12-01-2002</span>
+                        <h5 class="my-3">Design </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, atque?</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="600">
+                    <div class="blog-post p-4 border-custom">
+                        <span class="badge rounded-0 bg-primary">12-01-2002</span>
+                        <h5 class="my-3">Design </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, atque?</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Col -->
+                <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="700">
+                    <div class="blog-post p-4 border-custom">
+                        <span class="badge rounded-0 bg-primary">12-01-2002</span>
+                        <h5 class="my-3">Design </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, atque?</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Rest of your contact section content -->
+            <div class="row align-items-center mb-3" data-aos="fade-down" data-aos-delay="400">
+                <div class="col-md-8">
+                    <h6 class="text-primary" style="margin-top: 52px;">CONTACT</h6>
+                    <h2 class="h3">Get in touch</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium atque molestias distinctio,
+                        libero tempore et architecto quidem veritatis, explicabo rerum ratione placeat?</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 d-grid" data-aos="fade-down" data-aos-delay="400">
+                    <div class="d-grid">
+                        <div class="border-custom p-4 d-flex">
+                            <div class="icon"><i class="las la-phone"></i></div>
+                            <div class="ms-3">
+                                <h5>Phone</h5>
+                                <p class="mb-0">(+91)12345 67890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-custom p-4 d-flex">
+                        <div class="icon"><i class="lar la-envelope"></i></div>
+                        <div class="ms-3">
+                            <h5>Email</h5>
+                            <p class="mb-0">mail.id@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="border-custom p-4 d-flex">
+                        <div class="icon"><i class="las la-phone"></i></div>
+                        <div class="ms-3">
+                            <h5>Address</h5>
+                            <p class="mb-0">Norway, Night Lights</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="500">
+                    <form action="#" class="border-custom p-4">
+                        <div class="mb-3">
+                            <label class="mb-2" for="name">Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2" for="email">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2" for="message">Message</label>
+                            <textarea name="#" rows="4" class="form-control"></textarea>
+                        </div>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Insta Section -->
+    <div id="insta-section" class="row g-0 py-5" data-aos="fade-down" data-aos-delay="400">
+        <div>
+            <a href="creative.html" class="btn btn-primary">Wanna see more colors of creativity.</a>
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="Images/pic (1).webp" class="img-fluid" alt="">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="Images/pic(3).webp" class="img-fluid" alt="">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="Images/pic(2).webp" class="img-fluid" alt="">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="Images/pic(4).webp" class="img-fluid" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer data-aos="fade-down" data-aos-delay="400">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row g-0">
+
+                <!-- Col -->
+                <div class="col-md-6 p-4 border-custom">
+                    <h4><a href="#">Art Studio</a></h4>
+                    <p class="mb-0">By:- Aryan Sharma</p>
+                </div>
+
+                <!-- Col -->
+                <div class="col-md-3 p-4 border-custom">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#portfolio">Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col -->
+                <div class="col-md-3 p-4 border-custom">
+                    <h5>Follow us</h5>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll to top -->
+    <a href="#top" class="icon scroll-to-top"><i class="las la-arrow-up"></i></a>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
